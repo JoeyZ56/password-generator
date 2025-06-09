@@ -6,7 +6,7 @@ const Checkboxes = ({ onOptionsChange }) => {
   const [includeNumbers, setIncludeNumbers] = useState(false);
 
   //Notify the parent when the checkboxes change
-  const handleChange = (type, value) => {
+  const handleCheckedChange = (type, value) => {
     // Update local state based on which checkbox was changed
     if (type === "symbols") setIncludeSymbols(value);
     if (type === "numbers") setIncludeNumbers(value);
@@ -24,19 +24,19 @@ const Checkboxes = ({ onOptionsChange }) => {
   return (
     <div className="items-center justify-items-center ">
       <div className="flex flex-col">
-        <label>Special Characters?</label>
+        <label>Add Special Characters</label>
         <input
           type="checkbox"
           checked={includeSymbols}
-          onChange={(e) => handleChange("symbols", e.target.checked)}
+          onChange={(e) => handleCheckedChange("symbols", e.target.checked)}
         />
       </div>
       <div className="flex flex-col">
-        <label>Numbers?</label>
+        <label>Add Numbers</label>
         <input
           type="checkbox"
           checked={includeNumbers}
-          onChange={(e) => handleChange("numbers", e.target.checked)}
+          onChange={(e) => handleCheckedChange("numbers", e.target.checked)}
         />
       </div>
     </div>
