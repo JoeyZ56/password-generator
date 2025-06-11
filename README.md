@@ -1,13 +1,31 @@
-### Frontend UI:
+### Core Features to Implement (in order):
 
-- Password length input (e.g., slider or number field)
+State Management (useState for checkboxes, password, etc.)
 
-- Checkboxes: Include symbols, numbers, lowercase, uppercase
+Password Generation Logic
 
-- Output area + copy button
+Use string sets:
 
-- Password generation function (JS):
+Lowercase: abcdefghijklmnopqrstuvwxyz
 
-- Based on selected criteria, generate a password
+Uppercase: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-- Use good randomness (don’t just use Math.random())
+Numbers: 0123456789
+
+Symbols: !@#$%^&\*()\_+[]{}<>?
+
+Combine selected sets based on toggles.
+
+Randomly build password using Math.random() or a crypto method.
+
+Password Length Input (slider or number input)
+
+Copy to Clipboard
+
+Use navigator.clipboard.writeText()
+
+Password Strength Meter
+
+Optional: Use color-coded labels like “Weak”, “Moderate”, “Strong” based on length and variety.
+
+### Ask yourself: “Where does this data live?” and “Who needs to know about it?”

@@ -22,21 +22,23 @@ const Checkboxes = ({ onOptionsChange }) => {
   };
 
   return (
-    <div className="items-center justify-items-center ">
-      <div className="flex flex-col">
+    <div className="flex justify-center gap-6 mb-4">
+      <div className="flex flex-col items-center gap-1 text-sm text-gray-200">
         <label>Add Special Characters</label>
         <input
           type="checkbox"
           checked={includeSymbols}
           onChange={(e) => handleCheckedChange("symbols", e.target.checked)}
+          className="cursor-pointer accent-emerald-500 w-4 h-4"
         />
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center gap-1 text-sm text-gray-200">
         <label>Add Numbers</label>
         <input
           type="checkbox"
           checked={includeNumbers}
           onChange={(e) => handleCheckedChange("numbers", e.target.checked)}
+          className="cursor-pointer accent-emerald-500 w-4 h-4"
         />
       </div>
     </div>

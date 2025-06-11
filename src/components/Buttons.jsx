@@ -13,15 +13,18 @@ const Buttons = ({ onGenerate, password }) => {
   };
 
   return (
-    <div className="items-center justify-items-center space-x-6">
+    <div className="flex gap-15 justify-center mt-2">
       <button
         onClick={onGenerate}
-        className="bg-green-400 rounded-sm border-solid border-inherit cursor-pointer"
+        className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded w-2xl"
       >
-        Generate password
+        Generate
       </button>
-      <button onClick={handleCopyPassword} className="cursor-pointer">
-        {copied ? "Password Copied" : "Copy Password"}
+      <button
+        onClick={handleCopyPassword}
+        className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded w-2xl"
+      >
+        {copied ? "Copied!" : "Copy"}
       </button>
     </div>
   );

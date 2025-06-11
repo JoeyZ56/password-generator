@@ -13,7 +13,7 @@ export function generatePassword(options = {}) {
   const LOWER = "abcdefghijklmnopqrstuvwxyz";
   const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const NUMBERS = "0123456789";
-  const SYMBOLS = "!@#$%^&*()_+[]{}<>?";
+  const SYMBOLS = "!@#$%^&*()_+[]{}?-=~";
   // These are the sets of characters we can choose from to build the password.
 
   let charSet = "";
