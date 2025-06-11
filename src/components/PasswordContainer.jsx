@@ -1,11 +1,9 @@
 "use client";
-import { useState } from "react";
 
-const PasswordContainer = () => {
-  const [displayPassword, setDisplayPassword] = useState("");
+const PasswordContainer = ({ password }) => {
   return (
     <div className="items-center justify-items-center">
-      <h1>Generated Password: {displayPassword}</h1>
+      <h1>Generated Password: {password}</h1>
     </div>
   );
 };
