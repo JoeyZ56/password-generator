@@ -1,10 +1,10 @@
 export function generatePassword(options = {}) {
   const {
-    length = 12,
+    length = 12, //default
     includeLower = true,
-    includeUpper = true,
-    includeNumbers = true,
-    includeSymbols = true,
+    includeUpper = false,
+    includeNumbers = false,
+    includeSymbols = false,
   } = options;
   // Destructuring the 'options' object passed into the function.
   // This allows us to use values like 'length' or 'includeUpper' from other files (e.g., checkbox states),
